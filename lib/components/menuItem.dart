@@ -11,6 +11,7 @@ class MenuItem extends StatelessWidget {
             child: Icon(
               Icons.fastfood_sharp,
               size: 30,
+              color: green,
             ),
             radius: 50,
             backgroundColor: Colors.white,
@@ -25,6 +26,9 @@ class MenuItem extends StatelessWidget {
           Text(
             "Rp.50000",
             style: kPrice,
+          ),
+          SizedBox(
+            height: 20,
           ),
         ],
       ),

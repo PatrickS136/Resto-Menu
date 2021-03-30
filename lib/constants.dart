@@ -22,6 +22,7 @@ const kBottomContainer = BoxDecoration(
 const kMenuItem = TextStyle(
   fontSize: 20,
   fontWeight: FontWeight.w500,
+  color: brown,
 );
 
 const kPrice = TextStyle(
