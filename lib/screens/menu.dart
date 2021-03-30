@@ -1,6 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:restomenu/constants.dart';
 import 'package:restomenu/components/menuRow.dart';
+import 'package:restomenu/components/food.dart';
+
+List<MenuRow> createRows(List<Food> listOfFoods) {
+  List<MenuRow> menuRows = [];
+  for (int i = 0; i < listOfFoods.length; i += 2) {
+    menuRows.add(
+      MenuRow(
+        food1: listOfFoods[i],
+        food2: (i + 1 < listOfFoods.length) ? listOfFoods[i + 1] : null,
+      ),
+    );
+  }
+  return menuRows;
+}
 
 class Menu extends StatelessWidget {
   @override
@@ -24,7 +38,7 @@ class Menu extends StatelessWidget {
                   ),
                   Expanded(child: Container()),
                   Icon(
-                    Icons.fastfood_rounded,
+                    Icons.restaurant_menu,
                     size: 30,
                   )
                 ],
@@ -33,14 +47,7 @@ class Menu extends StatelessWidget {
             Expanded(
               child: Container(
                 child: ListView(
-                  children: [
-                    MenuRow(),
-                    MenuRow(),
-                    MenuRow(),
-                    MenuRow(),
-                    MenuRow(),
-                    MenuRow(),
-                  ],
+                  children: createRows(kListOfFoods),
                 ),
                 decoration: kBottomContainer,
               ),

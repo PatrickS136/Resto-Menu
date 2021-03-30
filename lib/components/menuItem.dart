@@ -1,34 +1,36 @@
 import 'package:flutter/material.dart';
+import 'package:restomenu/components/food.dart';
 import 'package:restomenu/constants.dart';
 
 class MenuItem extends StatelessWidget {
+  final Food food;
+  MenuItem(this.food);
   @override
   Widget build(BuildContext context) {
     return Expanded(
       child: Column(
         children: [
           CircleAvatar(
-            child: Icon(
-              Icons.fastfood_sharp,
-              size: 30,
-              color: green,
-            ),
-            radius: 50,
+            backgroundImage: food.icon,
+            radius: 60,
             backgroundColor: Colors.white,
           ),
+          SizedBox(
+            height: 20,
+          ),
           Text(
-            "Item",
+            food.name,
             style: kMenuItem,
           ),
           SizedBox(
             height: 20,
           ),
           Text(
-            "Rp.50000",
+            "\$${food.price}",
             style: kPrice,
           ),
           SizedBox(
-            height: 20,
+            height: 30,
           ),
         ],
       ),
