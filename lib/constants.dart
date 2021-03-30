@@ -10,3 +10,11 @@ const kMenuTitle = TextStyle(
   color: brown,
   fontSize: 30,
 );
+
+const kBottomContainer = BoxDecoration(
+  color: Colors.white,
+  borderRadius: BorderRadius.only(
+    topLeft: Radius.circular(20),
+    topRight: Radius.circular(20),
+  ),
+);
