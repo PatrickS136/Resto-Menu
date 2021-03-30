@@ -1,6 +1,6 @@
 # restomenu
 
-A new Flutter project.
+A very simple Restaurant Menu UI using Flutter.
 
 ## Getting Started
 
