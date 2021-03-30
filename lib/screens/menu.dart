@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:restomenu/constants.dart';
+import 'package:restomenu/components/menuRow.dart';
 
 class Menu extends StatelessWidget {
   @override
@@ -32,7 +33,14 @@ class Menu extends StatelessWidget {
             Expanded(
               child: Container(
                 child: ListView(
-                  children: [],
+                  children: [
+                    MenuRow(),
+                    MenuRow(),
+                    MenuRow(),
+                    MenuRow(),
+                    MenuRow(),
+                    MenuRow(),
+                  ],
                 ),
                 decoration: kBottomContainer,
               ),

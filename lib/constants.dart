@@ -14,7 +14,17 @@ const kMenuTitle = TextStyle(
 const kBottomContainer = BoxDecoration(
   color: Colors.white,
   borderRadius: BorderRadius.only(
-    topLeft: Radius.circular(20),
-    topRight: Radius.circular(20),
+    topLeft: Radius.circular(30),
+    topRight: Radius.circular(30),
   ),
+);
+
+const kMenuItem = TextStyle(
+  fontSize: 20,
+  fontWeight: FontWeight.w500,
+);
+
+const kPrice = TextStyle(
+  color: Colors.grey,
+  fontSize: 15,
 );
